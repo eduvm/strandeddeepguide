@@ -30,6 +30,14 @@ public class CraftingList extends ActionBarActivity {
         mAdView.loadAd(adRequest);
     }
 
+    @Override
+    public void onBackPressed() {
+        // finish() is called in super: we only override this method to be able to override the transition
+        super.onBackPressed();
+
+        overridePendingTransition(R.anim.slide_back_in, R.anim.slide_back_out);
+    }
+
     /**
      * Função que vai mostrar todas as opções de crafting_details
      */
@@ -145,7 +153,8 @@ public class CraftingList extends ActionBarActivity {
         startActivity(ICraftDetails);
 
         // Sobrepõe transição de telas
-        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+        //overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
     }
 
     /**

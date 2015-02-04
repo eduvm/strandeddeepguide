@@ -41,7 +41,8 @@ public class MainActivity extends ActionBarActivity {
             case R.id.btnCrafting:
 
                 startActivity(new Intent(getApplicationContext(), CraftingList.class));
-                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                //overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
 
                 break;
 

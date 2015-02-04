@@ -47,4 +47,12 @@ public class CraftingDetails extends ActionBarActivity {
         tvDesc.setText(ICraftRecebido.getStringExtra("descricao"));
     }
 
+    @Override
+    public void onBackPressed() {
+        // finish() is called in super: we only override this method to be able to override the transition
+        super.onBackPressed();
+
+        overridePendingTransition(R.anim.slide_back_in, R.anim.slide_back_out);
+    }
+
 }
