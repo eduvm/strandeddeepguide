@@ -2,12 +2,8 @@ package com.example.eduardo.strandeddeepguide;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
-
-import java.io.ByteArrayOutputStream;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -168,20 +164,8 @@ public class CraftingList extends Activity {
         // Seta título no intent
         ICraftDetails.putExtra("titulo", titulo);
 
-        // Pega arquivo de imagem
-        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), drawableId);
-
-        // Define novo array de bytes
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-
-        // Faz compressão do bitmap
-        bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos);
-
-        // Transforma para array de bytes
-        byte[] b = baos.toByteArray();
-
-        // Coloca imagem no intent
-        ICraftDetails.putExtra("imagem", b);
+        // Repassa o drawable para activity como um inteiro
+        ICraftDetails.putExtra("imagem", drawableId);
 
         // Seta ingredientes
         ICraftDetails.putExtra("ingredientes", ingredientes);

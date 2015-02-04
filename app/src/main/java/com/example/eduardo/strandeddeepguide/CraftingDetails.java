@@ -2,8 +2,6 @@ package com.example.eduardo.strandeddeepguide;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -36,21 +34,16 @@ public class CraftingDetails extends Activity {
         TextView tvIngredientes = (TextView) findViewById(R.id.tvIngredientes);
         TextView tvDesc = (TextView) findViewById(R.id.tvDesc);
 
-        // Seta variaveis nos objetos
+        // Seta título no objeto TextView
         tvTitulo.setText(ICraftRecebido.getStringExtra("titulo"));
 
+        // Recebe como inteiro (id da imagem) e seta no objeto ImageView
+        image.setImageResource(ICraftRecebido.getIntExtra("imagem", 0));
 
-        // Recebe array de bytes
-        byte[] b = ICraftRecebido.getByteArrayExtra("imagem");
-
-        // Transforma o array em imagem
-        Bitmap bmp = BitmapFactory.decodeByteArray(b, 0, b.length);
-
-        // Define a imagem como background no imageview
-        image.setImageBitmap(bmp);
-
-
+        // Seta ingredientes no TextView
         tvIngredientes.setText(ICraftRecebido.getStringExtra("ingredientes"));
+
+        // Seta descrição no TextView
         tvDesc.setText(ICraftRecebido.getStringExtra("descricao"));
     }
 
