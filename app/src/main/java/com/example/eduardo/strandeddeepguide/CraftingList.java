@@ -1,8 +1,8 @@
 package com.example.eduardo.strandeddeepguide;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 
 import com.google.android.gms.ads.AdRequest;
@@ -14,7 +14,7 @@ import com.google.android.gms.ads.AdView;
  * <p/>
  * Classe que vai exibir os botões com as opções de crafting_details
  */
-public class CraftingList extends Activity {
+public class CraftingList extends ActionBarActivity {
 
     // Declara intent
     Intent ICraftDetails;

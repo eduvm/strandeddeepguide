@@ -1,8 +1,8 @@
 package com.example.eduardo.strandeddeepguide;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -13,7 +13,7 @@ import com.google.android.gms.ads.AdView;
  * Criado por eduardo
  * Data de criação: 03/02/15
  */
-public class CraftingDetails extends Activity {
+public class CraftingDetails extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
