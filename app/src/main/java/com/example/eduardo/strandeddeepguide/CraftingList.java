@@ -2,7 +2,10 @@ package com.example.eduardo.strandeddeepguide;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.view.GestureDetectorCompat;
 import android.support.v7.app.ActionBarActivity;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
 import android.view.View;
 
 import com.google.android.gms.ads.AdRequest;
@@ -16,6 +19,9 @@ import com.google.android.gms.ads.AdView;
  */
 public class CraftingList extends ActionBarActivity {
 
+    // Declaro variável para o Detector de movimentos
+    private GestureDetectorCompat mDetector;
+
     // Declara intent
     Intent ICraftDetails;
 
@@ -28,6 +34,54 @@ public class CraftingList extends ActionBarActivity {
         AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
+
+        // Instância o detector
+        mDetector = new GestureDetectorCompat(this, new MyGestureListener());
+    }
+
+    // Faço override dos métodos de detecção
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+
+        this.mDetector.onTouchEvent(event);
+        return super.onTouchEvent(event);
+    }
+
+    /**
+     * Classe responsável por tratar os movimentos
+     */
+    class MyGestureListener extends GestureDetector.SimpleOnGestureListener {
+
+        @Override
+        public boolean onFling(MotionEvent event1, MotionEvent event2, float velocityX, float velocityY) {
+
+            // Movimento da esquerda para a direita
+            if (event2.getX() > event1.getX()) {
+
+                // Finaliza activity
+                finish();
+
+                // Override de transição das activities
+                overridePendingTransition(R.anim.slide_back_in, R.anim.slide_back_out);
+
+            }
+
+            return true;
+        }
+    }
+
+    /**
+     * Classe responsavel por dispachar os eventos de movimento
+     *
+     * @param ev
+     *
+     * @return
+     */
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+
+        super.dispatchTouchEvent(ev);
+        return mDetector.onTouchEvent(ev);
     }
 
     @Override
