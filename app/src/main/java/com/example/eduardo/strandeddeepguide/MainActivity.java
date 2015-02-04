@@ -1,9 +1,13 @@
 package com.example.eduardo.strandeddeepguide;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 
 public class MainActivity extends Activity {
@@ -13,6 +17,12 @@ public class MainActivity extends Activity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
+
     }
 
     /**
@@ -39,6 +49,18 @@ public class MainActivity extends Activity {
             default:
                 break;
         }
+    }
+
+
+    public void exibeMensagem(String titulo, String texto) {
+
+        // Apresenta mensagem de erro
+        AlertDialog.Builder mensagem = new AlertDialog.Builder(MainActivity.this);
+        mensagem.setTitle(titulo);
+        mensagem.setMessage(texto);
+        mensagem.setNeutralButton("OK", null);
+        mensagem.show();
+
     }
 
 

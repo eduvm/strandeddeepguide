@@ -9,6 +9,9 @@ import android.view.View;
 
 import java.io.ByteArrayOutputStream;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 /**
  * Criado por eduardo
  * Data de criação: 03/02/15
@@ -25,6 +28,10 @@ public class CraftingList extends Activity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.crafting_list);
+
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
     }
 
     /**

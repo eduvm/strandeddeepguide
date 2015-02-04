@@ -8,6 +8,9 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 /**
  * Criado por eduardo
  * Data de criação: 03/02/15
@@ -19,6 +22,10 @@ public class CraftingDetails extends Activity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.crafting_details);
+
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         // Define intent que vai receber os parâmetros
         Intent ICraftRecebido = getIntent();
