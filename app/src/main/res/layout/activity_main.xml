@@ -1,45 +1,175 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:ads="http://schemas.android.com/apk/res-auto"
-              android:layout_width="fill_parent"
-              android:layout_height="fill_parent"
-              android:orientation="vertical">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:background="@drawable/stranded_bg">
+
 
     <ImageView
-        android:id="@+id/ImageView01"
-        android:src="@drawable/ic_launcher"
-        android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
-        android:adjustViewBounds="true"
-        android:layout_weight="1.0"
-        android:layout_gravity="center_horizontal"/>
-
-    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CRAFTING"
-        android:id="@+id/btnCrafting"
-        android:onClick="onClickFeature"
-        android:background="@drawable/custom_btn_black_pearl"
-        android:textStyle="bold"
-        android:layout_weight="0"
-        android:layout_gravity="center_horizontal"
-        android:minWidth="120dp"
-        android:layout_marginBottom="20dp"/>
+        android:id="@+id/ivBola1"
+        android:src="@drawable/bubble4"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-200dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ivBola2"
+        android:src="@drawable/bubble5"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="120dp"
+        android:layout_marginBottom="-150dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ivBola3"
+        android:src="@drawable/bubble4"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="160dp"
+        android:layout_marginBottom="-100dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ivBola4"
+        android:src="@drawable/bubble5"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="210dp"
+        android:layout_marginBottom="-250dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ivBola5"
+        android:src="@drawable/bubble4"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="300dp"
+        android:layout_marginBottom="-300dp"/>
 
     <LinearLayout
-        android:gravity="center"
-        android:paddingTop="5px"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="#777">
 
-        <com.google.android.gms.ads.AdView
-            android:id="@+id/adView"
-            android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        >
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/scrollView3"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <ImageView
+                    android:id="@+id/ImageView01"
+                    android:src="@drawable/logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:adjustViewBounds="true"
+                    android:layout_weight="1.0"
+                    android:layout_gravity="center_horizontal"
+                    android:cropToPadding="false"/>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="20dp"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginRight="45dp"
+                    android:background="@drawable/linearlayout_bg"
+                    android:layout_marginBottom="20dp">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CRAFTING"
+                        android:id="@+id/btnCrafting"
+                        android:onClick="onClickFeature"
+
+                        android:textColor="#141414"
+                        android:textSize="20sp"
+                        android:background="@drawable/button_orange"
+                        android:shadowColor="#FF1303"
+                        android:shadowDx="0"
+                        android:shadowDy="0"
+                        android:shadowRadius="3"
+
+                        android:textStyle="bold"
+                        android:layout_weight="0"
+                        android:layout_gravity="center_horizontal"
+                        android:minWidth="120dp"
+                        android:layout_marginBottom="10dp"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TIPS"
+                        android:id="@+id/button"
+                        android:onClick="onClickFeature"
+                        android:textColor="#141414"
+                        android:textSize="20sp"
+                        android:background="@drawable/button_orange"
+                        android:shadowColor="#FF1303"
+                        android:shadowDx="0"
+                        android:shadowDy="0"
+                        android:shadowRadius="3"
+                        android:textStyle="bold"
+                        android:layout_weight="0"
+                        android:layout_gravity="center_horizontal"
+                        android:minWidth="120dp"
+                        android:layout_marginBottom="10dp"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ABOUT"
+                        android:id="@+id/button2"
+                        android:onClick="onClickFeature"
+                        android:textColor="#141414"
+                        android:textSize="20sp"
+                        android:background="@drawable/button_orange"
+                        android:shadowColor="#FF1303"
+                        android:shadowDx="0"
+                        android:shadowDy="0"
+                        android:shadowRadius="3"
+                        android:textStyle="bold"
+                        android:layout_weight="0"
+                        android:layout_gravity="center_horizontal"
+                        android:minWidth="120dp"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:gravity="center"
+            android:paddingTop="5px"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            ads:adSize="SMART_BANNER"
-            ads:adUnitId="@string/banner_ad_unit_id"
-            />
+            android:background="#777"
+            android:layout_weight="0">
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                ads:adSize="SMART_BANNER"
+                ads:adUnitId="@string/banner_ad_unit_id"
+                />
+        </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+
+
+</RelativeLayout>
