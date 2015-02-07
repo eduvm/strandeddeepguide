@@ -1,9 +1,10 @@
 package com.example.eduardo.strandeddeepguide;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.GestureDetectorCompat;
-import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.widget.ImageView;
@@ -16,7 +17,12 @@ import com.google.android.gms.ads.AdView;
  * Criado por eduardo
  * Data de criação: 03/02/15
  */
-public class CraftingDetails extends ActionBarActivity {
+public class CraftingDetails extends Activity {
+
+    // Define variáveis de controle do gestor de movimentos
+    private static final int SWIPE_MIN_DISTANCE = 120;
+    private static final int SWIPE_MAX_OFF_PATH = 250;
+    private static final int SWIPE_THRESHOLD_VELOCITY = 100;
 
     // Declaro variável para o Detector de movimentos
     private GestureDetectorCompat mDetector;
@@ -80,21 +86,37 @@ public class CraftingDetails extends ActionBarActivity {
     class MyGestureListener extends GestureDetector.SimpleOnGestureListener {
 
         @Override
-        public boolean onFling(MotionEvent event1, MotionEvent event2, float velocityX, float velocityY) {
+        public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
 
-            // Movimento da esquerda para a direita
-            if (event2.getX() > event1.getX()) {
+            Log.d("---onFling---", e1.toString() + e2.toString() + "");
 
-                // Finaliza activity
-                finish();
+            try {
+                if (Math.abs(e1.getY() - e2.getY()) > SWIPE_MAX_OFF_PATH) {
+                    return false;
+                }
+                // right to left swipe
+                if (e1.getX() - e2.getX() > SWIPE_MIN_DISTANCE && Math.abs(velocityX) > SWIPE_THRESHOLD_VELOCITY) {
+                    //do your code
 
-                // Override de transição das activities
-                overridePendingTransition(R.anim.slide_back_in, R.anim.slide_back_out);
+                } else if (e2.getX() - e1.getX() > SWIPE_MIN_DISTANCE && Math.abs(velocityX) > SWIPE_THRESHOLD_VELOCITY) {
 
+                    // Finaliza activity
+                    finish();
+
+                    // Override de transição das activities
+                    overridePendingTransition(R.anim.slide_back_in, R.anim.slide_back_out);
+
+                }
+
+            } catch (Exception e)
+
+            {
+                // nothing
             }
 
-            return true;
+            return false;
         }
+
     }
 
     /**
