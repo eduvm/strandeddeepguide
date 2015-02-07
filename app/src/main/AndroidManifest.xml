@@ -39,6 +39,10 @@
             android:name=".ShowTips">
         </activity>
 
+        <activity
+            android:name=".ShowAbout">
+        </activity>
+
         <!--Include the AdActivity configChanges and theme. -->
         <activity
             android:name="com.google.android.gms.ads.AdActivity"
