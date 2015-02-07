@@ -35,6 +35,10 @@
             android:name=".CraftingDetails">
         </activity>
 
+        <activity
+            android:name=".ShowTips">
+        </activity>
+
         <!--Include the AdActivity configChanges and theme. -->
         <activity
             android:name="com.google.android.gms.ads.AdActivity"

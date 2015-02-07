@@ -98,6 +98,15 @@ public class MainActivity extends Activity {
 
                 break;
 
+            // Caso clique no botão add
+            case R.id.btnTips:
+
+                startActivity(new Intent(getApplicationContext(), ShowTips.class));
+
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+
+                break;
+
 
             default:
                 break;
