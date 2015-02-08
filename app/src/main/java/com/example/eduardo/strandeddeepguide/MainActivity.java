@@ -24,6 +24,9 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Chama avaliação
+        AppRater.app_launched(this);
+
         AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
@@ -93,7 +96,6 @@ public class MainActivity extends Activity {
             case R.id.btnCrafting:
 
                 startActivity(new Intent(getApplicationContext(), CraftingList.class));
-                //overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
 
                 break;
@@ -122,7 +124,6 @@ public class MainActivity extends Activity {
         }
     }
 
-
     public void exibeMensagem(String titulo, String texto) {
 
         // Apresenta mensagem de erro
@@ -134,5 +135,6 @@ public class MainActivity extends Activity {
 
     }
 
-
 }
+
+
