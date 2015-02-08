@@ -3,60 +3,21 @@
                 xmlns:ads="http://schemas.android.com/apk/res-auto"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:orientation="vertical"
-                android:background="@drawable/stranded_bg">
+                android:orientation="vertical">
 
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/ivBola1"
-        android:src="@drawable/bubble4"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="-200dp"/>
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/ivBola2"
-        android:src="@drawable/bubble5"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="120dp"
-        android:layout_marginBottom="-150dp"/>
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/ivBola3"
-        android:src="@drawable/bubble4"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="160dp"
-        android:layout_marginBottom="-100dp"/>
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/ivBola4"
-        android:src="@drawable/bubble5"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="210dp"
-        android:layout_marginBottom="-250dp"/>
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/ivBola5"
-        android:src="@drawable/bubble4"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="300dp"
-        android:layout_marginBottom="-300dp"/>
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/stranded_bg"/>
 
     <LinearLayout
 
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
 
         <ScrollView
             android:layout_width="fill_parent"
