@@ -6,6 +6,7 @@ import android.support.v4.view.GestureDetectorCompat;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
+import android.widget.ImageView;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -36,6 +37,19 @@ public class ShowTips extends Activity {
 
         // Instância o detector
         mDetector = new GestureDetectorCompat(this, new MyGestureListener());
+
+        // Declara objeto do layout
+        ImageView ivBola1, ivBola2, ivBola3, ivBola4, ivBola5;
+
+        // Instancia objetos do layout
+        ivBola1 = (ImageView) findViewById(R.id.ivBola1);
+        ivBola2 = (ImageView) findViewById(R.id.ivBola2);
+        ivBola3 = (ImageView) findViewById(R.id.ivBola3);
+        ivBola4 = (ImageView) findViewById(R.id.ivBola4);
+        ivBola5 = (ImageView) findViewById(R.id.ivBola5);
+
+        // Chama função que cria animação das bolhas
+        AnimacaoBolhas.CriaAnimacao(ivBola1, ivBola2, ivBola3, ivBola4, ivBola5);
 
     }
 
