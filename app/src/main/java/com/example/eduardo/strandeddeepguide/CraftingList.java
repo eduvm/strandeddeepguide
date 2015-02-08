@@ -22,9 +22,6 @@ import com.google.android.gms.ads.AdView;
  */
 public class CraftingList extends Activity {
 
-    // Declara objeto do layout
-    ImageView ivBola1, ivBola2, ivBola3, ivBola4, ivBola5;
-
     // Define variáveis de controle do gestor de movimentos
     private static final int SWIPE_MIN_DISTANCE = 150;
     private static final int SWIPE_MAX_OFF_PATH = 250;
@@ -50,52 +47,19 @@ public class CraftingList extends Activity {
         // Instância o detector
         mDetector = new GestureDetectorCompat(this, new MyGestureListener());
 
+        // Declara objeto do layout
+        ImageView ivBola1, ivBola2, ivBola3, ivBola4, ivBola5;
+
+        // Instancia objetos do layout
         ivBola1 = (ImageView) findViewById(R.id.ivBola1);
         ivBola2 = (ImageView) findViewById(R.id.ivBola2);
         ivBola3 = (ImageView) findViewById(R.id.ivBola3);
         ivBola4 = (ImageView) findViewById(R.id.ivBola4);
         ivBola5 = (ImageView) findViewById(R.id.ivBola5);
 
-        // Anima bola1
-        TranslateAnimation animation = new TranslateAnimation(0.0f, 0.0F, ivBola1.getY(), -6500f);
-        animation.setDuration(13000);
-        animation.setRepeatCount(-1);
-        animation.setRepeatMode(1);
-        animation.setFillAfter(true);
-        ivBola1.startAnimation(animation);
+        // Chama função que cria animação das bolhas
+        AnimacaoBolhas.CriaAnimacao(ivBola1, ivBola2, ivBola3, ivBola4, ivBola5);
 
-
-        // Anima bola2
-        TranslateAnimation animation2 = new TranslateAnimation(0.0f, 0.0F, ivBola2.getY(), -6500f);
-        animation2.setDuration(13000);
-        animation2.setRepeatCount(-1);
-        animation2.setRepeatMode(1);
-        animation2.setFillAfter(true);
-        ivBola2.startAnimation(animation2);
-
-        // Anima bola3
-        TranslateAnimation animation3 = new TranslateAnimation(0.0f, 0.0F, ivBola3.getY(), -6500f);
-        animation3.setDuration(12000);
-        animation3.setRepeatCount(-1);
-        animation3.setRepeatMode(1);
-        animation3.setFillAfter(true);
-        ivBola3.startAnimation(animation3);
-
-        // Anima bola4
-        TranslateAnimation animation4 = new TranslateAnimation(0.0f, 0.0F, ivBola4.getY(), -6500f);
-        animation4.setDuration(14000);
-        animation4.setRepeatCount(-1);
-        animation4.setRepeatMode(1);
-        animation4.setFillAfter(true);
-        ivBola4.startAnimation(animation4);
-
-        // Anima bola5
-        TranslateAnimation animation5 = new TranslateAnimation(0.0f, 0.0F, ivBola5.getY(), -6500f);
-        animation5.setDuration(15000);
-        animation5.setRepeatCount(-1);
-        animation5.setRepeatMode(1);
-        animation5.setFillAfter(true);
-        ivBola5.startAnimation(animation5);
     }
 
     // Faço override dos métodos de detecção
