@@ -3,8 +3,14 @@
                 xmlns:ads="http://schemas.android.com/apk/res-auto"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:orientation="vertical"
-                android:background="@drawable/stranded_bg">
+                android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/stranded_bg"/>
 
 
     <ImageView
@@ -55,8 +61,7 @@
 
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
 
         <ScrollView
             android:layout_width="fill_parent"
