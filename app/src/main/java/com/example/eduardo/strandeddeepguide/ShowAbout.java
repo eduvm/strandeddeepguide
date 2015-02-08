@@ -1,12 +1,14 @@
 package com.example.eduardo.strandeddeepguide;
 
 import android.app.Activity;
+import android.content.pm.PackageInfo;
 import android.os.Bundle;
 import android.support.v4.view.GestureDetectorCompat;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -50,6 +52,25 @@ public class ShowAbout extends Activity {
 
         // Chama função que cria animação das bolhas
         AnimacaoBolhas.CriaAnimacao(ivBola1, ivBola2, ivBola3, ivBola4, ivBola5);
+
+        // Pega versão do aplicativo
+        try {
+
+            PackageInfo pInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
+            String version = pInfo.versionName;
+
+            // Declara e instancia objeto TextView para mostrar versão do app
+            TextView tvVersion = (TextView) findViewById(R.id.tvVersion);
+
+            // Seta texto da versão
+            tvVersion.setText("Version: " + version);
+
+        } catch (Exception error) {
+
+            // Apresenta mensagem de erro
+            error.printStackTrace();
+
+        }
 
     }
 
