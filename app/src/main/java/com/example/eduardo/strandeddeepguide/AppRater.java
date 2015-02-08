@@ -45,10 +45,10 @@ public class AppRater {
             }
         }
 
-        editor.commit();
+        editor.apply();
     }
 
-    public static void showRateDialog(final Context mContext, final SharedPreferences.Editor editor) {
+    private static void showRateDialog(final Context mContext, final SharedPreferences.Editor editor) {
 
         final Dialog dialog = new Dialog(mContext);
         dialog.setTitle("Rate " + APP_TITLE);
