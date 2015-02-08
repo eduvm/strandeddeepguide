@@ -205,7 +205,7 @@
                         android:layout_height="wrap_content"
                         android:text="You can only sleep between 18:00 and 06:00"
                         android:id="@+id/textView6"
-                        android:layout_marginBottom="30dp"/>
+                        />
 
                 </LinearLayout>
 
@@ -241,7 +241,7 @@
                         android:layout_height="wrap_content"
                         android:text="Your watch will beep when health is low."
                         android:id="@+id/textView8"
-                        android:layout_marginBottom="30dp"/>
+                        />
 
                 </LinearLayout>
 
@@ -278,7 +278,7 @@
                         android:layout_height="wrap_content"
                         android:text="Dont touch Sea Urchins, they are poisonous to the touch."
                         android:id="@+id/textView10"
-                        android:layout_marginBottom="30dp"/>
+                        />
 
                 </LinearLayout>
 
@@ -315,7 +315,7 @@
                         android:layout_height="wrap_content"
                         android:text="The lantern can be turn on with left click."
                         android:id="@+id/textView12"
-                        android:layout_marginBottom="30dp"/>
+                        />
 
                 </LinearLayout>
 
@@ -352,7 +352,7 @@
                         android:layout_height="wrap_content"
                         android:text="Sleeping causes food and thirst to lower."
                         android:id="@+id/textView14"
-                        android:layout_marginBottom="30dp"/>
+                        />
                 </LinearLayout>
 
                 <LinearLayout
@@ -388,7 +388,7 @@
                         android:layout_height="wrap_content"
                         android:text="Swimming to much can cause red bumps on arm (Rest in the shade and eat something)."
                         android:id="@+id/textView16"
-                        android:layout_marginBottom="30dp"/>
+                        />
 
                 </LinearLayout>
 
@@ -425,7 +425,7 @@
                         android:layout_height="wrap_content"
                         android:text="Create rock shards by smashing rocks using any weapon."
                         android:id="@+id/textView18"
-                        android:layout_marginBottom="30dp"/>
+                        />
 
                 </LinearLayout>
 
@@ -462,7 +462,7 @@
                         android:layout_height="wrap_content"
                         android:text="You can boil water to drink from a bucket found in wrecks."
                         android:id="@+id/textView20"
-                        android:layout_marginBottom="30dp"/>
+                        />
 
                 </LinearLayout>
 
@@ -500,7 +500,7 @@
                         android:layout_height="wrap_content"
                         android:text="You will hear a 'DING' when your food is cooked."
                         android:id="@+id/textView22"
-                        android:layout_marginBottom="30dp"/>
+                        />
 
                 </LinearLayout>
 
@@ -536,7 +536,7 @@
                         android:layout_height="wrap_content"
                         android:text="Do not save when you are in a shipwreck, you may get bugged when you load the game."
                         android:id="@+id/textView24"
-                        android:layout_marginBottom="30dp"/>
+                        />
 
                 </LinearLayout>
 
@@ -572,7 +572,7 @@
                         android:layout_height="wrap_content"
                         android:text="Yucca plants will Re-grow in about 10 RL minutes."
                         android:id="@+id/textView26"
-                        android:layout_marginBottom="30dp"/>
+                        />
 
                 </LinearLayout>
 
@@ -609,7 +609,7 @@
                         android:layout_height="wrap_content"
                         android:text="Having your food bar full and your hunger bar full will heal you, unless you get a status message saying you are bleeding. In that case you need a bandage from a wrech or morphine for broken limbs."
                         android:id="@+id/textView28"
-                        android:layout_marginBottom="30dp"/>
+                        />
                 </LinearLayout>
 
                 <LinearLayout
